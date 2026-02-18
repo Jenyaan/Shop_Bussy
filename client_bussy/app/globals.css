@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(180deg, #0C73FE 0%, #0F6AE6 100%);
+  --foreground: #ffffff;
+}
+
+body {
+  min-height: 100vh; /* VERY IMPORTANT */
+  background: var(--background);
+  background-attachment: fixed; /* makes it smooth */
+  color: var(--foreground);
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
