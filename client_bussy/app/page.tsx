@@ -95,7 +95,7 @@ export default function Home() {
        <SectionTour Name="Популярні напрямки" ColorTextNameStyle="text-black" Items={toursData}/>
       </div>
 
-      <div className="pt-[50px]">
+      <div className="pt-[100px]">
        <SectionTour Name="Гарячі тури" ColorTextNameStyle="text-white" Items={toursData}/>
       </div>
 
