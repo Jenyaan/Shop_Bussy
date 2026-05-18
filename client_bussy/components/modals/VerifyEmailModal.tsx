@@ -64,7 +64,7 @@ export default function VerifyEmailModal({
         <div className="flex justify-between items-center mb-7">
           <button
             onClick={onBack}
-            className="flex items-center gap-1.5 text-3xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
+            className="flex items-center gap-1.5 text-3xl font-bold text-gray-900 hover:text-gray-700 transition-colors cursor-pointer"
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
@@ -105,7 +105,7 @@ export default function VerifyEmailModal({
             />
             <button
               type="button"
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1a73e8] font-medium text-sm hover:underline transition-all"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1a73e8] font-medium text-sm hover:underline transition-all cursor-pointer"
             >
               Повторити
             </button>
@@ -128,7 +128,7 @@ export default function VerifyEmailModal({
           <button 
             type="submit"
             disabled={isButtonDisabled}
-            className={`w-full font-medium py-3.5 rounded-xl mb-2 transition-colors ${
+            className={`w-full font-medium py-3.5 rounded-xl mb-2 transition-colors cursor-pointer ${
               isButtonDisabled 
                 ? 'bg-[#b8bcc5] text-white cursor-not-allowed' // Сіра, якщо коду немає або він коротший за 6
                 : 'bg-[#1a73e8] hover:bg-blue-600 text-white shadow-sm' // Синя, якщо введено 6 цифр

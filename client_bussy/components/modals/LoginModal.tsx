@@ -51,7 +51,7 @@ export default function LoginModal({
           <button
             onClick={onClose}
             className="absolute right-0 p-2 text-gray-400 bg-gray-100 rounded-xl hover:bg-gray-200 hover:text-gray-600 transition-colors"
-            aria-label="Закрити"
+            aria-label="Закрити "
           >
             <svg 
               className="w-5 h-5" 
@@ -99,7 +99,7 @@ export default function LoginModal({
           {/* Главная кнопка */}
           <button 
             type="submit" 
-            className="w-full bg-[#1a73e8] hover:bg-blue-600 text-white font-medium py-3.5 rounded-xl transition-colors mb-5 shadow-sm"
+            className="w-full bg-[#1a73e8] hover:bg-blue-600 text-white font-medium py-3.5 rounded-xl transition-colors mb-5 shadow-sm cursor-pointer"
           >
             Увійти
           </button>
@@ -111,7 +111,7 @@ export default function LoginModal({
           <button
             type="button"
             onClick={onSwitchToRegister}
-            className="text-[#1a73e8] font-medium hover:underline transition-all"
+            className="text-[#1a73e8] font-medium hover:underline transition-all cursor-pointer"
           >
             Створіть акаунт
           </button>

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useEffect } from "react";
 import { DayPicker } from "react-day-picker";
 import { format } from "date-fns";
@@ -32,7 +34,7 @@ export default function SearchBar() {
     date ? format(date, "dd.MM.yyyy", { locale: uk }) : "";
 
   return (
-    <div className="w-full mt-8 text-black px-8">
+    <div className="w-full text-black px-8">
       <div 
         ref={wrapperRef}
         // ЗМІНЕНО ТУТ: max-w-7xl замінено на max-w-5xl, щоб зробити вужче

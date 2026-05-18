@@ -20,7 +20,6 @@ const toursData: Tour[] = [
     price: 2400,
     duration: '2 год. в дорозі',
     imageUrl: '/test/image1.png',
-    isActive: true,
   },
   {
     id: 2,
@@ -41,6 +40,27 @@ const toursData: Tour[] = [
     city: 'Харків',
     price: 2400,
     duration: '2 год. в дорозі',
+    imageUrl: '/test/image1.png',
+  },
+    {
+    id: 5,
+    city: 'Одеса',
+    price: 2400,
+    duration: 'год. в дорозі',
+    imageUrl: '/test/image1.png',
+  },
+  {
+    id: 6,
+    city: 'Дніпро',
+    price: 2400,
+    duration: 'год. в дорозі',
+    imageUrl: '/test/image1.png',
+  },
+  {
+    id: 7,
+    city: 'Харків',
+    price: 2400,
+    duration: 'год. в дорозі',
     imageUrl: '/test/image1.png',
   },
 ];

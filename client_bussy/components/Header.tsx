@@ -1,65 +1,66 @@
 'use client'
 
-import Image from "next/image"
 import { useState } from 'react'
+import { Headphones, User } from 'lucide-react' // Використовуємо lucide-react для іконок
 import LoginModal from '@/components/modals/LoginModal'
 import RegisterModal from '@/components/modals/RegisterModal'
 import VerifyEmailModal from '@/components/modals/VerifyEmailModal'
-
+import Link from 'next/link'
 
 interface HeaderProps {
-  auth: true
+  auth?: boolean; // Зробив опціональним, щоб не викликало помилок, якщо не передати
 }
 
-export default function MyComponent({ auth }: HeaderProps) {
+export default function Header({ auth }: HeaderProps) {
   const [activeModal, setActiveModal] = useState<
     'login' | 'register' | 'verify' | null
   >(null)
 
   return (
-    <header className="w-full">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    // Додано синій фон (колір взято зі скріншота) та білий колір тексту
+    <header className="w-full bg-[#1E66F5] text-white">
+      {/* Висота хедера фіксована або задається через padding, тут використовуємо h-[90px] згідно з вашим leading-[90px] */}
+      <div className="max-w-7xl mx-auto px-6 h-[90px] flex items-center justify-between">
         
-        <h1 className="text-[33px] leading-[90px] font-bold">
+        <Link href="/" className="text-[33px] font-bold tracking-wide cursor-pointer">
           Bussy
-        </h1>
+        </Link>
 
         <div className="flex items-center gap-8">
-
-          <button className="flex items-center gap-2 text-base font-medium hover:opacity-70 transition">
-            <Image src="/help.svg" alt="Support" width={24} height={24} />
+          <Link href="/firm/fleet"  className="flex items-center gap-2 text-[15px] font-medium hover:opacity-80 transition-opacity cursor-pointer">
+            <Headphones size={20} strokeWidth={2.5} />
             Підтримка
-          </button>
+          </Link>
 
           <button
-            className="flex items-center gap-2 text-base font-medium hover:opacity-70 transition"
+            className="flex items-center gap-2 text-[15px] font-medium hover:opacity-80 transition-opacity cursor-pointer"
             onClick={() => setActiveModal('login')}
           >
-            <Image src="/profile.svg" alt="Profile" width={24} height={24} />
+            <User size={20} strokeWidth={2.5} />
             Профіль
           </button>
-
         </div>
       </div>
 
-    <LoginModal
-      isOpen={activeModal === 'login'}
-      onClose={() => setActiveModal(null)}
-      onSwitchToRegister={() => setActiveModal('register')}
-    />
+      {/* --- МОДАЛЬНІ ВІКНА --- */}
+      <LoginModal
+        isOpen={activeModal === 'login'}
+        onClose={() => setActiveModal(null)}
+        onSwitchToRegister={() => setActiveModal('register')}
+      />
 
-    <RegisterModal
-      isOpen={activeModal === 'register'}
-      onClose={() => setActiveModal(null)}
-      onSwitchToLogin={() => setActiveModal('login')}
-      onSuccessRegister={() => setActiveModal('verify')}
-    />
+      <RegisterModal
+        isOpen={activeModal === 'register'}
+        onClose={() => setActiveModal(null)}
+        onSwitchToLogin={() => setActiveModal('login')}
+        onSuccessRegister={() => setActiveModal('verify')}
+      />
 
-    <VerifyEmailModal
-      isOpen={activeModal === 'verify'}
-      onClose={() => setActiveModal(null)}
-      onBack={() => setActiveModal('register')}
-    />
+      <VerifyEmailModal
+        isOpen={activeModal === 'verify'}
+        onClose={() => setActiveModal(null)}
+        onBack={() => setActiveModal('register')}
+      />
     </header>
   )
 }
