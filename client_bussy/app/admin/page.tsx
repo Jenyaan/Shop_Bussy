@@ -30,7 +30,7 @@ const WEEKLY_SALES = [
 
 export default function FirmDashboardPage() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans pb-12 text-gray-900">
+    <div className="min-h-screen bg-gray-50 font-manrope pb-12 text-gray-900">
       
       {/* Header панелі керування */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-20">
@@ -52,12 +52,6 @@ export default function FirmDashboardPage() {
               <User size={20} />
             </Link>
 
-            <Link 
-              href="/admin/create-route" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition-colors"
-            >
-              <Plus size={16} /> <span className="hidden sm:inline">Створити рейс</span>
-            </Link>
           </div>
         </div>
       </header>
@@ -202,53 +196,40 @@ export default function FirmDashboardPage() {
 
           {/* --- ПРАВА ЧАСТИНА (Графік та швидкі дії) --- */}
           <div className="flex flex-col gap-6">
-            
-            {/* Графік продажів */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-lg font-bold text-gray-900">Продажі за тиждень</h2>
-                <div className="text-gray-400"><Calendar size={20}/></div>
-              </div>
-              
-              <div className="h-40 flex items-end justify-between gap-2 mt-4">
-                {WEEKLY_SALES.map((stat, idx) => (
-                  <div key={idx} className="flex flex-col items-center flex-1 group">
-                    <div className="w-full flex justify-center relative">
-                      <div className="absolute -top-8 bg-gray-900 text-white text-[10px] font-bold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        {stat.value}%
-                      </div>
-                      <div 
-                        className={`w-full max-w-[32px] rounded-t-md transition-all duration-500 ${
-                          stat.day === 'Пт' ? 'bg-blue-600' : 'bg-blue-100 group-hover:bg-blue-200'
-                        }`}
-                        style={{ height: `${stat.value}%` }}
-                      ></div>
-                    </div>
-                    <div className="text-xs font-medium text-gray-500 mt-2">{stat.day}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             {/* Швидкі посилання */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h2 className="text-lg font-bold text-gray-900 mb-4">Керування</h2>
               <div className="space-y-3">
+                
                 <Link 
-                  href="/admin/routes" 
+                  href="/admin/list-route" 
                   className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors text-left border border-transparent hover:border-gray-100"
                 >
                   <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 text-sm">Маршрути та ціни</div>
-                    <div className="text-xs text-gray-500 mt-0.5">Додати або змінити рейси</div>
+                    <div className="font-bold text-gray-900 text-sm">Усі маршрути</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Перегляд та керування рейсами</div>
+                  </div>
+                </Link>
+
+                <Link 
+                  href="/admin/create-route" 
+                  className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors text-left border border-transparent hover:border-gray-100"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                    <Plus size={20} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-sm">Додати рейс</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Створення нового маршруту</div>
                   </div>
                 </Link>
                 
                 <Link 
-                  href="/admin/fleet" 
+                  href="/admin/list-bus" 
                   className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors text-left border border-transparent hover:border-gray-100"
                 >
                   <div className="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center shrink-0">
@@ -256,23 +237,23 @@ export default function FirmDashboardPage() {
                   </div>
                   <div>
                     <div className="font-bold text-gray-900 text-sm">Автопарк</div>
-                    <div className="text-xs text-gray-500 mt-0.5">Керування автобусами та місцями</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Перегляд наявних автобусів</div>
                   </div>
                 </Link>
 
-                {/* Нове посилання: Фінанси та Звіти */}
                 <Link 
-                  href="/admin/finance" 
+                  href="/admin/add-bus" 
                   className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors text-left border border-transparent hover:border-gray-100"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center shrink-0">
-                    <BarChart3 size={20} />
+                  <div className="w-10 h-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                    <Plus size={20} />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 text-sm">Фінанси та звіти</div>
-                    <div className="text-xs text-gray-500 mt-0.5">Виплати, статистика та акти</div>
+                    <div className="font-bold text-gray-900 text-sm">Додати автобус</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Реєстрація нового транспорту</div>
                   </div>
                 </Link>
+
               </div>
             </div>
 

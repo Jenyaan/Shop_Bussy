@@ -14,10 +14,11 @@ import {
   Signpost
 } from 'lucide-react';
 import RouteModal from '@/components/modals/RouteModal';
+import ProfileModal from '@/components/modals/ProfileModal';
+import LogoutConfirmModal from '@/components/modals/LogoutConfirmModal'; // 1. Імпортуємо нову модалку
 import Headers from "@/components/Header";
 
-
-// // --- ТИПИЗАЦИЯ ---
+// ... ТИПІЗАЦІЯ І МОКОВІ ДАНІ ЗАЛИШАЮТЬСЯ БЕЗ ЗМІН ...
 interface RouteStop {
   time: string;
   date?: string;
@@ -39,7 +40,6 @@ interface Ticket {
   carrier?: { name: string; plate: string; model: string; seats: string; };
 }
 
-// --- МОКОВЫЕ ДАННЫЕ ---
 const MOCK_TICKETS: Ticket[] = [
   {
     id: '#98742130',
@@ -81,7 +81,8 @@ const MOCK_TICKETS: Ticket[] = [
 export default function TicketsPage() {
   const [filter, setFilter] = useState<'active' | 'all'>('all');
   
-  const [activeModal, setActiveModal] = useState<string | null>(null);
+  // 2. Додаємо 'logout' в можливі стани активної модалки
+  const [activeModal, setActiveModal] = useState<'route' | 'profile' | 'logout' | null>(null);
   const [currentRouteStops, setCurrentRouteStops] = useState<RouteStop[]>([]);
 
   const openRouteModal = (stops: RouteStop[]) => {
@@ -89,11 +90,18 @@ export default function TicketsPage() {
     setActiveModal('route');
   };
 
+  const handleLogout = () => {
+    // Тут буде логіка очищення токенів/кукі та редірект
+    console.log('Користувач вийшов з акаунта');
+    setActiveModal(null);
+    // window.location.href = '/'; 
+  };
+
   return (
     <div>
         <Headers auth={true} />
  
-        <div className="min-h-screen bg-[#F3F4F6] px-8 pb-8 pt-21 font-sans text-slate-800 flex justify-center">                
+        <div className="min-h-screen bg-[#F3F4F6] px-8 pb-8 pt-21 font-manrope text-slate-800 flex justify-center">                
             <div className="max-w-6xl w-full flex gap-8">
                 
                 {/* --- SIDEBAR --- */}
@@ -113,13 +121,22 @@ export default function TicketsPage() {
                     <History size={20} className="text-orange-500" />
                     Історія покупок
                     </button>
-                    <button className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-gray-50 text-gray-600 transition-colors cursor-pointer">
-                    <Settings size={20} className="text-gray-400" />
-                    Змінити дані
+                    
+                    <button 
+                      onClick={() => setActiveModal('profile')}
+                      className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-gray-50 text-gray-600 transition-colors cursor-pointer"
+                    >
+                      <Settings size={20} className="text-gray-400" />
+                      Змінити дані
                     </button>
-                    <button className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-red-50 text-red-500 font-medium mt-2 transition-colors cursor-pointer">
-                    <LogOut size={20} className="text-red-400" />
-                    Вийти з аккаунта
+
+                    {/* 3. Вішаємо відкриття модалки на кнопку виходу */}
+                    <button 
+                      onClick={() => setActiveModal('logout')}
+                      className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-red-50 text-red-500 font-medium mt-2 transition-colors cursor-pointer"
+                    >
+                      <LogOut size={20} className="text-red-400" />
+                      Вийти з акаунта
                     </button>
                 </nav>
                 </aside>
@@ -174,14 +191,11 @@ export default function TicketsPage() {
 
                         {/* Таймлайн с линией и плашками */}
                         <div className="relative py-2.5">
-                            {/* Пунктирная линия (строго по центру по вертикали, сзади плашек) */}
                             <div className="absolute top-1/2 -translate-y-1/2 left-[7px] right-[7px] border-t-[2px] border-dashed border-gray-200"></div>
 
-                            {/* Точки и плашки */}
                             <div className="flex items-center justify-between relative z-10">
                             <div className="w-3.5 h-3.5 rounded-full border-[2.5px] border-orange-500 bg-white shrink-0"></div>
 
-                            {/* Контейнер с белым фоном, чтобы перекрыть линию ровно под плашками */}
                             <div className="bg-white px-3 flex gap-2">
                                 <div className="flex items-center gap-1.5 bg-[#FFF3E0] text-[#E65100] px-3 py-1 rounded-full text-[13px] font-medium tracking-wide leading-none">
                                 <Bus size={14} /> {ticket.duration}
@@ -197,13 +211,11 @@ export default function TicketsPage() {
 
                         {/* Города, даты и кнопка Маршрут */}
                         <div className="relative flex justify-between mt-2">
-                            {/* Откуда */}
                             <div className="text-[14px] leading-tight">
                             <p className="text-gray-500 mb-0.5">{ticket.departure.city} <span className="mx-1">•</span> {ticket.departure.date}</p>
                             <p className="font-medium text-gray-900">{ticket.departure.station}</p>
                             </div>
 
-                            {/* Кнопка "Маршрут" (Слегка приподнята над текстом городов) */}
                             <div className="absolute left-1/2 -translate-x-1/2 -top-1.5">
                             <button 
                                 onClick={() => openRouteModal(ticket.stops)}
@@ -213,7 +225,6 @@ export default function TicketsPage() {
                             </button>
                             </div>
 
-                            {/* Куда */}
                             <div className="text-[14px] leading-tight text-right">
                             <p className="text-gray-500 mb-0.5">{ticket.arrival.city} <span className="mx-1">•</span> {ticket.arrival.date}</p>
                             <p className="font-medium text-gray-900">{ticket.arrival.station}</p>
@@ -230,7 +241,6 @@ export default function TicketsPage() {
                         </div>
                         
                         <div className="flex items-center gap-5">
-                            {/* Тултип Перевізник */}
                             <div className="relative group flex items-center gap-1.5 cursor-pointer hover:text-gray-900 transition-colors">
                             <Info size={16} /> 
                             <span>Перевізник</span>
@@ -281,6 +291,18 @@ export default function TicketsPage() {
                 stops={currentRouteStops}
             />
 
+            <ProfileModal 
+                isOpen={activeModal === 'profile'}
+                onClose={() => setActiveModal(null)}
+            />
+
+            {/* 4. Рендеримо модалку виходу */}
+            <LogoutConfirmModal 
+                isOpen={activeModal === 'logout'}
+                onClose={() => setActiveModal(null)}
+                onConfirm={handleLogout}
+            />
+
             <style dangerouslySetInnerHTML={{__html: `
                 .custom-scrollbar::-webkit-scrollbar { width: 4px; }
                 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
@@ -288,7 +310,5 @@ export default function TicketsPage() {
             `}} />
             </div>
     </div>
-    
-   
   );
 }

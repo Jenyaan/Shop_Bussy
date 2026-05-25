@@ -53,9 +53,8 @@ const SteeringWheel = () => (
 export default function SeatSelectionModal({ isOpen, onClose, onSelect }: SeatSelectionModalProps) {
   const [selectedSeat, setSelectedSeat] = useState<string | null>(null)
 
-  // Имитация занятых мест (как на макете)
-  const occupiedSeats = ['A2', 'C2', 'I2']
-  const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+  // Имитация занятых мест (теперь используем только цифры)
+  const occupiedSeats = ['2', '10', '34']
 
   const handleSeatClick = (id: string) => {
     if (occupiedSeats.includes(id)) return
@@ -89,7 +88,7 @@ export default function SeatSelectionModal({ isOpen, onClose, onSelect }: SeatSe
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="w-[340px] md:w-[380px] text-gray-900 mx-auto">
+      <div className="w-[340px] md:w-[380px] text-gray-900 mx-auto font-manrope">
         
         {/* Заголовок */}
         <div className="flex justify-between items-center mb-6 md:mb-8">
@@ -102,14 +101,14 @@ export default function SeatSelectionModal({ isOpen, onClose, onSelect }: SeatSe
         {/* Схема автобуса и направляющая стрелка */}
         <div className="relative flex justify-center mb-8 pl-2 pr-10">
           
-          {/* Обертка для автобуса, решает проблему с z-index у фар */}
+          {/* Обертка для автобуса */}
           <div className="relative w-[260px] mt-2">
             
-            {/* Фары (Спереди) - теперь они лежат НАД фоном модалки, но ПОД автобусом */}
+            {/* Фары (Спереди) */}
             <div className="absolute -top-2.5 left-[35px] w-12 h-4 bg-[#d4d9e0] rounded-t-full"></div>
             <div className="absolute -top-2.5 right-[35px] w-12 h-4 bg-[#d4d9e0] rounded-t-full"></div>
 
-            {/* Контейнер автобуса (z-10 перекрывает нижнюю часть фар) */}
+            {/* Контейнер автобуса */}
             <div className="relative bg-[#f1f3f5] rounded-[40px] px-5 py-8 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.04)] flex flex-col gap-3.5 z-10">
               
               {/* --- РЯД 0: Окно водителя, Руль и Передняя дверь --- */}
@@ -121,21 +120,26 @@ export default function SeatSelectionModal({ isOpen, onClose, onSelect }: SeatSe
                 <DoorRight />
               </div>
 
-              {/* --- РЯДЫ A-H: Сиденья и окна --- */}
-              {rows.map((row) => (
-                <div key={row} className="relative flex justify-between items-center h-[40px]">
-                  <WindowLeft />
-                  <div className="flex gap-2">
-                    <SeatButton id={`${row}1`} />
-                    <SeatButton id={`${row}2`} />
+              {/* --- ОСНОВНЫЕ РЯДЫ (с 1 по 32 места) --- */}
+              {Array.from({ length: 8 }).map((_, rowIndex) => {
+                // Вычисляем стартовый номер места для каждого ряда
+                const startNum = rowIndex * 4 + 1;
+                
+                return (
+                  <div key={rowIndex} className="relative flex justify-between items-center h-[40px]">
+                    <WindowLeft />
+                    <div className="flex gap-2">
+                      <SeatButton id={startNum.toString()} />
+                      <SeatButton id={(startNum + 1).toString()} />
+                    </div>
+                    <div className="flex gap-2">
+                      <SeatButton id={(startNum + 2).toString()} />
+                      <SeatButton id={(startNum + 3).toString()} />
+                    </div>
+                    <WindowRight />
                   </div>
-                  <div className="flex gap-2">
-                    <SeatButton id={`${row}3`} />
-                    <SeatButton id={`${row}4`} />
-                  </div>
-                  <WindowRight />
-                </div>
-              ))}
+                );
+              })}
 
               {/* --- ПРОХОД: Задние двери --- */}
               <div className="relative flex justify-between items-center h-8 my-1.5">
@@ -143,16 +147,16 @@ export default function SeatSelectionModal({ isOpen, onClose, onSelect }: SeatSe
                 <DoorRight />
               </div>
 
-              {/* --- РЯД I: Последние сиденья и окна --- */}
+              {/* --- ПОСЛЕДНИЙ РЯД (места с 33 по 36) --- */}
               <div className="relative flex justify-between items-center h-[40px]">
                 <WindowLeft />
                 <div className="flex gap-2">
-                  <SeatButton id="I1" />
-                  <SeatButton id="I2" />
+                  <SeatButton id="33" />
+                  <SeatButton id="34" />
                 </div>
                 <div className="flex gap-2">
-                  <SeatButton id="I3" />
-                  <SeatButton id="I4" />
+                  <SeatButton id="35" />
+                  <SeatButton id="36" />
                 </div>
                 <WindowRight />
               </div>

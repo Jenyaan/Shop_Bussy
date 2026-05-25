@@ -11,6 +11,7 @@ import {
   Banknote, 
   MapPin
 } from "lucide-react";
+import Link from "next/link";
 
 const MOCK_TICKETS: Ticket[] = [
   {
@@ -75,7 +76,7 @@ export default function SearchResultsPage() {
               <ArrowRight className="text-blue-200" size={28} />
               <span>Штутгарт</span>
             </div>
-            <p className="text-blue-100 font-medium mt-2">12 жовтня • 1 пасажир</p>
+            <p className="text-blue-100 font-medium mt-2">12 жовтня</p>
           </div>
 
           <SearchBar />
@@ -186,7 +187,7 @@ export default function SearchResultsPage() {
             {/* Вывод списка билетов */}
             <div className="flex flex-col gap-6">
               {MOCK_TICKETS.map((ticket) => (
-                <TicketCard key={ticket.id} ticket={ticket} />
+                <Link href={"/ticket"}><TicketCard key={ticket.id} ticket={ticket} /></Link> 
               ))}
             </div>
 
