@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39C9177C-C298-1E69-64D4-8732868249A9}|..\\ShopyBussy.DAL\\ShopyBussy.DAL.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.dal\\extensions\\databaseextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C9177C-C298-1E69-64D4-8732868249A9}|..\\ShopyBussy.DAL\\ShopyBussy.DAL.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.dal\\ef\\shopybussydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C9177C-C298-1E69-64D4-8732868249A9}|..\\ShopyBussy.DAL\\ShopyBussy.DAL.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.dal\\migrations\\20260528224258_updatetripstops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|c:\\users\\jekan\\documents\\code\\shop_bussy\\shopybussy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C859D18-75F5-85C6-9314-16D1E8D867D5}|ShopyBussy.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260528224258_UpdateTripStops.cs",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\Migrations\\20260528224258_UpdateTripStops.cs",
+              "RelativeDocumentMoniker": "..\\ShopyBussy.DAL\\Migrations\\20260528224258_UpdateTripStops.cs",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\Migrations\\20260528224258_UpdateTripStops.cs",
+              "RelativeToolTip": "..\\ShopyBussy.DAL\\Migrations\\20260528224258_UpdateTripStops.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T22:45:36.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseExtension.cs",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\Extensions\\DatabaseExtension.cs",
+              "RelativeDocumentMoniker": "..\\ShopyBussy.DAL\\Extensions\\DatabaseExtension.cs",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\Extensions\\DatabaseExtension.cs",
+              "RelativeToolTip": "..\\ShopyBussy.DAL\\Extensions\\DatabaseExtension.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T22:44:38.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopyBussyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\EF\\ShopyBussyDbContext.cs",
+              "RelativeDocumentMoniker": "..\\ShopyBussy.DAL\\EF\\ShopyBussyDbContext.cs",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.DAL\\EF\\ShopyBussyDbContext.cs",
+              "RelativeToolTip": "..\\ShopyBussy.DAL\\EF\\ShopyBussyDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA9wDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T22:44:35.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-28T22:44:10.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-28T22:44:08.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jekan\\Documents\\Code\\Shop_Bussy\\ShopyBussy.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T22:40:42.986Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

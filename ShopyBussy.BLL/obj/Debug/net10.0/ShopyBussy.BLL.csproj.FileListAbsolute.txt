@@ -1,0 +1,16 @@
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\bin\Debug\net10.0\ShopyBussy.BLL.deps.json
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\bin\Debug\net10.0\ShopyBussy.BLL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\bin\Debug\net10.0\ShopyBussy.BLL.pdb
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\bin\Debug\net10.0\ShopyBussy.DAL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\bin\Debug\net10.0\ShopyBussy.DAL.pdb
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.csproj.AssemblyReference.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.AssemblyInfoInputs.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.AssemblyInfo.cs
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.csproj.CoreCompileInputs.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.sourcelink.json
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBus.AF857E36.Up2Date
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\refint\ShopyBussy.BLL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ShopyBussy.BLL.pdb
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.BLL\obj\Debug\net10.0\ref\ShopyBussy.BLL.dll

@@ -1,0 +1,15 @@
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\bin\Debug\net10.0\ShopyBussy.DAL.deps.json
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\bin\Debug\net10.0\ShopyBussy.DAL.runtimeconfig.json
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\bin\Debug\net10.0\ShopyBussy.DAL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\bin\Debug\net10.0\ShopyBussy.DAL.pdb
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.csproj.AssemblyReference.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.AssemblyInfoInputs.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.AssemblyInfo.cs
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.csproj.CoreCompileInputs.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.sourcelink.json
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\refint\ShopyBussy.DAL.dll
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.pdb
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ShopyBussy.DAL.genruntimeconfig.cache
+C:\Users\jekan\Documents\Code\Shop_Bussy\ShopyBussy.DAL\obj\Debug\net10.0\ref\ShopyBussy.DAL.dll
